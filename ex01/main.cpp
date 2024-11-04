@@ -6,7 +6,7 @@
 /*   By: knacer <knacer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 13:16:48 by knacer            #+#    #+#             */
-/*   Updated: 2024/11/03 18:39:39 by knacer           ###   ########.fr       */
+/*   Updated: 2024/11/04 15:03:08 by knacer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int main()
 {
-    ScavTrap c;
+    ScavTrap c("tototo");
     
     c.guardGate();
-    c.takeDamage(5);
-    c.attack();
-    c.beRepaired(3);
+    c.takeDamage(0);
+    c.attack("target");
+    c.beRepaired(0);
 }

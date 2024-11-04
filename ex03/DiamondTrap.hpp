@@ -6,7 +6,7 @@
 /*   By: knacer <knacer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 22:15:36 by knacer            #+#    #+#             */
-/*   Updated: 2024/11/03 23:19:57 by knacer           ###   ########.fr       */
+/*   Updated: 2024/11/04 17:16:42 by knacer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,12 @@ class DiamondTrap : public FragTrap, public ScavTrap
     private:
         std::string Name;
     public:
+        DiamondTrap();
         DiamondTrap(std::string name);
+        DiamondTrap(DiamondTrap& robot);
+        DiamondTrap& operator=(DiamondTrap& robot);
         ~DiamondTrap();
+        void attack (std::string target);
         void whoAmI();
 };
 

@@ -6,7 +6,7 @@
 /*   By: knacer <knacer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 17:56:32 by knacer            #+#    #+#             */
-/*   Updated: 2024/11/03 23:13:27 by knacer           ###   ########.fr       */
+/*   Updated: 2024/11/04 16:08:33 by knacer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : virtual public ClapTrap
+class ScavTrap :virtual public ClapTrap
 {
     public:
+        ScavTrap();
         ScavTrap(std::string name);
+        ScavTrap(ScavTrap& robot);
+        ScavTrap& operator=(ScavTrap& robot);
         ~ScavTrap();
-        void attack();
+        void attack(std::string target);
         void guardGate();
 };
 

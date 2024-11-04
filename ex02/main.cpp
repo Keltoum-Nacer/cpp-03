@@ -6,7 +6,7 @@
 /*   By: knacer <knacer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 13:16:48 by knacer            #+#    #+#             */
-/*   Updated: 2024/11/03 21:55:50 by knacer           ###   ########.fr       */
+/*   Updated: 2024/11/04 20:06:07 by knacer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int main()
 {
-    FragTrap c;
+    FragTrap c("robot");
+    FragTrap d;
     
-    c.attack("robot");
+    c.attack("rororo");
     c.takeDamage(5);
-    c.beRepaired(3);
+    d.attack("ririri");
+    d.beRepaired(0);
     c.highFivesGuys();
 }

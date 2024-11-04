@@ -6,7 +6,7 @@
 /*   By: knacer <knacer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 21:39:26 by knacer            #+#    #+#             */
-/*   Updated: 2024/11/03 21:54:44 by knacer           ###   ########.fr       */
+/*   Updated: 2024/11/04 15:49:15 by knacer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,31 @@
 
 FragTrap::FragTrap()
 {
+    hit_points = 100;
+    energy_points = 100;
+    attack_damage = 30;
+    std::cout << "FragTrap default constructor called" << std::endl;
+}
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
+{
+    hit_points = 100;
+    energy_points = 100;
+    attack_damage = 30;
     std::cout << "FragTrap constructor called" << std::endl;
+}
+
+FragTrap::FragTrap(FragTrap& robot) : ClapTrap(robot)
+{
+    std::cout << "FragTrap copy constructor called!" << std::endl;
+}
+
+FragTrap& FragTrap::operator=(FragTrap& robot)
+{
+    std::cout << "FragTrap Copy assignement operator called" << std::endl;
+    if (this != &robot)
+        ClapTrap::operator=(robot);
+    return(*this);
 }
 
 FragTrap::~FragTrap()

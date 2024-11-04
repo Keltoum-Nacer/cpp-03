@@ -6,7 +6,7 @@
 /*   By: knacer <knacer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 17:56:32 by knacer            #+#    #+#             */
-/*   Updated: 2024/11/03 18:39:25 by knacer           ###   ########.fr       */
+/*   Updated: 2024/11/04 14:57:18 by knacer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ class ScavTrap :public ClapTrap
 {
     public:
         ScavTrap();
+        ScavTrap(std::string name);
+        ScavTrap(ScavTrap& robot);
+        ScavTrap& operator=(ScavTrap& robot);
         ~ScavTrap();
-        void attack();
+        void attack(std::string target);
         void guardGate();
 };
 
